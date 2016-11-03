@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0/">
+    <title>Football</title>
+    <link rel="stylesheet" type="text/css"  href="f_style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+</head>
+<body>
+
+   <div class="square" data-type="main" id="main">
+       <div class="ball" id="ball_ob" data-type="ball">
+
+       </div>
+   </div>
+
+<script>
+
+    var main = document.querySelector('#main');
+    var ball = document.querySelector('#ball_ob');
+    var coordinate = document.body;
+
+    coordinate.onclick = function(e) {
+        var coord_all = main.getBoundingClientRect(); /* координаты поля*/
+        console.log(coord_all);
+
+        var x = +e.clientX; /* коорд х при клике*/
+        console.log(x);
+
+        var y = e.clientY; /* коорд у при клике*/
+        console.log(y);
+
+        /** */
+       ball.style.position.left = x;  /* коорд х полученные при клике записать в стиль к ball*/
+       console.log(ball);
+
+
+    }
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
